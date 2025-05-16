@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('../img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+}
+
+.launch-button {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.launch-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  color: #000;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.back {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.back:hover {
+  opacity: 1;
+}
+
+.horizontal-links li {
+  display: inline-block; /* or inline */
+  margin-right: 10px; /* Adjust spacing between links */
+}
+.horizontal-links a {
+  /* Add any other styles like text color, font, etc. */
+  text-decoration: none; /* Remove underlines */
+}
