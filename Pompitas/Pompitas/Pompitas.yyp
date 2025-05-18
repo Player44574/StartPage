@@ -36,6 +36,7 @@
   "name":"Pompitas",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"spr_pompita","path":"sprites/spr_pompita/spr_pompita.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
