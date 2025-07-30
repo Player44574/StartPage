@@ -29,6 +29,11 @@ if os_browser{
 	}
 }
 
+//debug
+if global.debug=1 and keyboard_check_pressed(vk_enter){
+    pattern=choose(1,2,3,4,5,6,7,8,9,10)
+}
+
 //keys
 global.bk[10] = keyboard_check_pressed(ord("E"))
 global.bk[11] = keyboard_check_pressed(ord("R"))
@@ -46,22 +51,207 @@ global.bk[31] = keyboard_check_pressed(ord("C"))
 global.bk[32] = keyboard_check_pressed(ord("V"))
 global.bk[33] = keyboard_check_pressed(ord("B"))
 
-//create buttons
-for (var i = 0; i < 4; i++) {
-	var gb = instance_create_layer(0,0,layer,obj_button)
-	with(gb){
-		oid = 10 + i
-	}
+if pattern=-1{
+    global.button[10] = choose(0,1)
+    global.button[11] = choose(0,1)
+    global.button[12] = choose(0,1)
+    global.button[13] = choose(0,1)
+    
+    global.button[20] = choose(0,1)
+    global.button[21] = choose(0,1)
+    global.button[22] = choose(0,1)
+    global.button[23] = choose(0,1)
+    global.button[24] = choose(0,1)
+    
+    global.button[30] = choose(0,1)
+    global.button[31] = choose(0,1)
+    global.button[32] = choose(0,1)
+    global.button[33] = choose(0,1)
 }
-for (var i = 0; i < 5; i++) {
-	var gb = instance_create_layer(0,0,layer,obj_button)
-	with(gb){
-		oid = 20 + i
-	}
+else if pattern=0{
+    global.button[10] = 0
+    global.button[11] = 0
+    global.button[12] = 0
+    global.button[13] = 0
+    
+    global.button[20] = 0
+    global.button[21] = 0
+    global.button[22] = 0
+    global.button[23] = 0
+    global.button[24] = 0
+    
+    global.button[30] = 0
+    global.button[31] = 0
+    global.button[32] = 0
+    global.button[33] = 0
 }
-for (var i = 0; i < 4; i++) {
-	var gb = instance_create_layer(0,0,layer,obj_button)
-	with(gb){
-		oid = 30 + i
-	}
+else if pattern=1{
+    global.button[10] = 1
+    global.button[11] = 1
+    global.button[12] = 0
+    global.button[13] = 0
+    
+    global.button[20] = 0
+    global.button[21] = 1
+    global.button[22] = 1
+    global.button[23] = 0
+    global.button[24] = 0
+    
+    global.button[30] = 0
+    global.button[31] = 0
+    global.button[32] = 1
+    global.button[33] = 1
+}
+else if pattern=2{
+    global.button[10] = 1
+    global.button[11] = 0
+    global.button[12] = 0
+    global.button[13] = 1
+    
+    global.button[20] = 1
+    global.button[21] = 0
+    global.button[22] = 0
+    global.button[23] = 0
+    global.button[24] = 1
+    
+    global.button[30] = 1
+    global.button[31] = 1
+    global.button[32] = 1
+    global.button[33] = 1
+}
+else if pattern=3{
+    global.button[10] = 1
+    global.button[11] = 1
+    global.button[12] = 1
+    global.button[13] = 1
+    
+    global.button[20] = 1
+    global.button[21] = 0
+    global.button[22] = 0
+    global.button[23] = 0
+    global.button[24] = 1
+    
+    global.button[30] = 1
+    global.button[31] = 1
+    global.button[32] = 1
+    global.button[33] = 1
+}
+else if pattern=4{
+    global.button[10] = 1
+    global.button[11] = 0
+    global.button[12] = 0
+    global.button[13] = 0
+    
+    global.button[20] = 0
+    global.button[21] = 1
+    global.button[22] = 1
+    global.button[23] = 1
+    global.button[24] = 0
+    
+    global.button[30] = 0
+    global.button[31] = 0
+    global.button[32] = 0
+    global.button[33] = 1
+}
+else if pattern=5{
+    global.button[10] = 0
+    global.button[11] = 1
+    global.button[12] = 1
+    global.button[13] = 0
+    
+    global.button[20] = 1
+    global.button[21] = 0
+    global.button[22] = 1
+    global.button[23] = 0
+    global.button[24] = 1
+    
+    global.button[30] = 0
+    global.button[31] = 1
+    global.button[32] = 1
+    global.button[33] = 0
+}
+else if pattern=6{
+    global.button[10] = 1
+    global.button[11] = 0
+    global.button[12] = 1
+    global.button[13] = 0
+    
+    global.button[20] = 0
+    global.button[21] = 1
+    global.button[22] = 0
+    global.button[23] = 1
+    global.button[24] = 0
+    
+    global.button[30] = 1
+    global.button[31] = 0
+    global.button[32] = 1
+    global.button[33] = 0
+}
+else if pattern=7{
+    global.button[10] = 1
+    global.button[11] = 0
+    global.button[12] = 0
+    global.button[13] = 1
+    
+    global.button[20] = 1
+    global.button[21] = 0
+    global.button[22] = 1
+    global.button[23] = 0
+    global.button[24] = 1
+    
+    global.button[30] = 1
+    global.button[31] = 0
+    global.button[32] = 0
+    global.button[33] = 1
+}
+else if pattern=8{
+    global.button[10] = 1
+    global.button[11] = 1
+    global.button[12] = 1
+    global.button[13] = 1
+    
+    global.button[20] = 0
+    global.button[21] = 1
+    global.button[22] = 1
+    global.button[23] = 1
+    global.button[24] = 0
+    
+    global.button[30] = 1
+    global.button[31] = 0
+    global.button[32] = 0
+    global.button[33] = 0
+}
+else if pattern=9{
+    global.button[10] = 1
+    global.button[11] = 1
+    global.button[12] = 1
+    global.button[13] = 0
+    
+    global.button[20] = 0
+    global.button[21] = 0
+    global.button[22] = 1
+    global.button[23] = 0
+    global.button[24] = 0
+    
+    global.button[30] = 0
+    global.button[31] = 1
+    global.button[32] = 1
+    global.button[33] = 1
+}
+else if pattern=10{
+    global.button[10] = 0
+    global.button[11] = 1
+    global.button[12] = 1
+    global.button[13] = 0
+    
+    global.button[20] = 1
+    global.button[21] = 1
+    global.button[22] = 1
+    global.button[23] = 1
+    global.button[24] = 1
+    
+    global.button[30] = 1
+    global.button[31] = 0
+    global.button[32] = 0
+    global.button[33] = 1
 }
