@@ -51,6 +51,12 @@ global.bk[31] = keyboard_check_pressed(ord("C"))
 global.bk[32] = keyboard_check_pressed(ord("V"))
 global.bk[33] = keyboard_check_pressed(ord("B"))
 
+global.restart = keyboard_check_pressed(vk_space)
+
+if global.restart {
+    
+}
+
 if pattern=-1{
     global.button[10] = choose(0,1)
     global.button[11] = choose(0,1)
